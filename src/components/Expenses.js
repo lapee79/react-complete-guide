@@ -1,12 +1,13 @@
-import './Expenses.css';
-
 import ExpenseItem from './ExpenseItem';
+import Card from './Card';
+
+import './Expenses.css';
 
 const Expenses = ({ expenses = [] }) => {
   return (
-    <div className="expenses">
+    <Card className="expenses">
       {expenses.map(({title, amount, date}) => <ExpenseItem title={title} amount={amount} date={date} />)}
-    </div>
+    </Card>
   );
 };
 
